@@ -1,0 +1,39 @@
+<!-- signin.component.html -->
+<div class="signin-container">
+    <h2>Hello User</h2>
+    <form >
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" [(ngModel)]="email" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" [(ngModel)]="password" required>
+      </div>
+  
+      <div class="form-group">
+        <button type="submit" (click)="login()">Sign In</button>
+      </div>
+      <div class="signup-card-footer">
+        Create new account? <a routerLink="/register">SignUp</a>
+      </div>
+      <div class="signup-card-footer">
+        <a routerLink="/forget-p">Forget Password?</a>
+      </div>
+
+      <div class=" image row mt-2">
+        <a  (click)="signInWithGoogle()" style="text-decoration: none; cursor: pointer; " >
+          <div class="card shadow text-center" style="border-radius: 50%; ">
+            <div class="card-body" >
+              <img src="/assets/google.png" alt="" width="24px" height="24px" >
+            </div>
+          </div>
+        </a>
+      </div>
+    </form>
+  </div>
+
+
+  
+  
